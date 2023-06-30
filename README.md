@@ -7,7 +7,7 @@ Widget Nuxt projeto de estudo com nuxt3. Vue3, Nuxt3, Typescript, Tailwind e bib
 **👇 Follow the steps.** 
 
 ```bash
-git git@github.com:Helton-Carlos/Widget-nuxt.git
+git git@github.com:Helton-Carlos/widget-nuxt.git
 ```
 
 ```bash

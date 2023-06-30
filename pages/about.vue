@@ -1,3 +1,12 @@
+<script setup>
+
+definePageMeta({
+  middleware: () => {
+    return true
+  }
+})
+</script>
+
 <template>
   <div>
     <mainText>
@@ -5,3 +14,4 @@
     </mainText>
   </div>
 </template>
+

@@ -7,13 +7,14 @@ const router = [
 </script>
 
 <template>
-  <header class="bg-white w-[300px] h-screen pt-8 text-center mr-4">
+  <header class="sidebar">
     <ul>
-      <h1 class="text-3xl font-bold text-success-ground my-5">Nuxt3</h1>
-      <li v-for="(routes, index) in router" :key="index" class="my-1">
+      <h1 class="text-3xl font-bold text-success-ground">Nuxt3</h1>
+      
+      <li v-for="(routes, index) in router" :key="index" class="my-8">
         <nuxt-link
           :to="routes.path"
-          class="text-xl text-gray-dark font-medium hover:text-white hover:bg-success hover:rounded-lg hover:px-4 hover:py-1"
+          class="routes-path "
           >{{ routes.name }}</nuxt-link
         >
       </li>

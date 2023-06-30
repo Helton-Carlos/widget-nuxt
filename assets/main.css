@@ -17,8 +17,28 @@ span {
   box-sizing: border-box;
 }
 
+h1 {
+  @apply my-4 text-3xl font-bold text-success-ground
+}
+
+ul {
+  @apply my-4
+}
+
+li {
+  @apply py-2
+}
+
 .card {
-  @apply p-4 mb-4 bg-white rounded-lg shadow-lg cursor-pointer mr-4 sm:w-[270px] hover:scale-105 hover:opacity-75
+  @apply p-4 mb-4 bg-white rounded-lg shadow-lg cursor-pointer mr-4 sm:w-[270px] hover:scale-105 hover:opacity-75;
+}
+
+.sidebar {
+  @apply bg-white w-[300px] h-screen pt-8 text-center mr-4;
+}
+
+.routes-path {
+  @apply text-base capitalize text-gray-dark gap-4 font-medium hover:text-white hover:bg-success hover:rounded-lg hover:px-8 hover:py-1;
 }
 
 .positive {

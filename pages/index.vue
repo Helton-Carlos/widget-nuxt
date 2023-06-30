@@ -8,6 +8,11 @@ function selectCard(id: number) {
   navigateTo(`/posts/${id}`);
 }
 
+definePageMeta({
+  middleware: () => {
+    return true
+  }
+})
 </script>
 
 <template>
