@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-base;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  @apply p-4 mb-4 bg-white rounded-lg shadow-lg cursor-pointer mr-4 sm:w-[270px] hover:scale-105 hover:opacity-75
+}
+
+.positive {
+  @apply border-l-success bg-success hover:bg-success-ground hover:text-white;
+}
+
+.dange {
+  @apply border-l-error bg-error hover:bg-error-ground hover:text-white;
+}
+
+.standard {
+  @apply border text-center font-semibold hover:bg-gray hover:text-white;
+}
+
+.tag-green {
+  @apply text-success;
+}
+
+.tag-red {
+  @apply text-error;
+}
+
+.tag-blue {
+  @apply text-blue;
+}
+
