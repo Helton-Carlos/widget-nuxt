@@ -12,13 +12,14 @@
     "@nuxt/devtools": "latest",
     "@types/node": "^18",
     "autoprefixer": "^10.4.14",
-    "nuxt": "^3.6.0",
-    "postcss": "^8.4.24",
-    "tailwindcss": "^3.3.2",
-    "typescript": "latest",
     "eslint": "^8.38.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "nuxt": "^3.6.0",
+    "nuxt-icon": "^0.4.2",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "typescript": "latest"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.60.1",

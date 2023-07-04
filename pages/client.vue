@@ -1,13 +1,13 @@
 <script setup>
 
-definePageMeta({
-  middleware: () => {
-    return true
-  }
-})
 // definePageMeta({
-//   middleware: 'redirect'
+//   middleware: () => {
+//     return true
+//   }
 // })
+definePageMeta({
+  middleware: 'redirect'
+})
 </script>
 
 <template>

@@ -25,7 +25,7 @@ module.exports = {
     },
     colors: {
       base: "#E5E5E5",
-      primary: "#4739B5",
+      primary: "#00DEA3",
       secondary: "#121626",
       warning: "#FF9500",
       error: "#FF2D55",
@@ -35,7 +35,7 @@ module.exports = {
       white: "#FFFF",
       black: "#000000",
       gray: "#737375",
-      "gray-card": "#757577",
+      "gray-light": "#DADADA",
       "gray-dark": "#232323",
       blue: "#007AFF",
       purple: "#AF52DE",

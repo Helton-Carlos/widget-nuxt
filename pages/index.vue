@@ -21,7 +21,7 @@ definePageMeta({
       Nuxt-3
     </mainText>
     
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap gap-4">
       <Card
         v-for="card in cardValue"
         :key="card.id"

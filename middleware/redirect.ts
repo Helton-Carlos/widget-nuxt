@@ -3,7 +3,9 @@ export default defineNuxtRouteMiddleware((to) => {
 
   if ($config) {
     console.log('tem config')
+  } else {
+    console.log('Heading to', to.path, 'but I think we should go somewhere else...')
+    return '/posts/1'
   }
-  console.log('Heading to', to.path, 'but I think we should go somewhere else...')
-  return '/posts/1'
+  
 })
