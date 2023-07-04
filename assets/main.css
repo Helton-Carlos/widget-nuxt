@@ -30,7 +30,7 @@ li {
 }
 
 .card {
-  @apply p-4 bg-white rounded-lg shadow-lg cursor-pointer sm:w-[270px] 
+  @apply bg-white rounded-lg shadow-lg cursor-pointer sm:w-[270px] 
     hover:scale-105 hover:opacity-75;
 }
 
@@ -40,7 +40,7 @@ li {
 
 .routes-path {
   @apply flex items-center justify-center text-base capitalize text-gray-dark font-medium w-2/4 mx-auto gap-1 py-1
-    hover:text-white hover:bg-primary hover:rounded-lg hover:px-2;
+    hover:text-gray hover:underline hover:rounded-lg hover:px-2;
 }
 
 .positive {

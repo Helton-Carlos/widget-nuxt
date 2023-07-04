@@ -23,13 +23,13 @@ defineEmits<{
       <img
         :src="imageMain"
         :alt="title"
-        class="w-full"
+        class="w-full h-[170px]"
       />
     </div>
 
     <div class="flex justify-between items-center" v-if="context">
-      <div class="flex py-2">
-        <img :src="imagePersona" :alt="title" class="w-[80px] rounded-xl" />
+      <div class="flex py-2 px-4">
+        <img :src="imagePersona" :alt="title" class="h-[40px] w-[40px] rounded-full" />
         <div class="text-left pl-4">
           <p
             class="text-gray-dark font-extrabold text-md"
