@@ -4,7 +4,7 @@ defineEmits<{ (e: "onClick"): void }>();
 
 <template>
   <div>
-    <button class="btn" @click="$emit('onClick')">
+    <button class="btn text-sm" @click="$emit('onClick')">
       <slot></slot>
     </button>
   </div>

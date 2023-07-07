@@ -32,17 +32,17 @@ function purchase() {
     </div>
 
     <div
-      class="bg-white flex justify-between items-center gap-4 p-4 my-4 shadow-lg"
+      class="card-down"
     >
       <img
         :src="cardValue[id].imageMain"
         :alt="cardValue[id].title"
-        class="w-[350px] h-[200px]"
+        class="w-full h-[200px] md:w-[450px]"
       />
 
       <div>
         <div>
-          <div class="flex gap-2">
+          <div class="md:flex gap-2">
             <Icon name="🛫" />
             <p class="font-bold underline pb-1">Descrição:</p>
           </div>
@@ -50,7 +50,7 @@ function purchase() {
           <p class="pb-2">{{ cardValue[id].describe }}</p>
         </div>
 
-        <div class="flex">
+        <div class="md:flex gap-4">
           <div class="mr-4">
             <div class="flex gap-2">
               <Icon name="💵" />
@@ -60,6 +60,28 @@ function purchase() {
             <p class="pb-2">{{ cardValue[id].money }}</p>
           </div>
 
+          <div class="md:flex gap-4">
+            <div class="mr-4">
+              <div class="flex gap-2">
+                <Icon name="🌁" />
+                <p class="font-bold underline pb-1">Cidade:</p>
+              </div>
+
+              <p class="pb-2">{{ cardValue[id].title }}</p>
+            </div>
+          </div>
+
+          <div class="mr-4">
+            <div class="flex gap-2">
+              <Icon name="🗾" />
+              <p class="font-bold underline pb-1">País:</p>
+            </div>
+
+            <p class="pb-2">{{ cardValue[id].country }}</p>
+          </div>
+        </div>
+
+        <div class="gap-4">
           <div class="mr-4">
             <div class="flex gap-2">
               <Icon name="✅" />
@@ -69,17 +91,23 @@ function purchase() {
             <div class="flex flex-wrap">
               <span
                 v-for="definitions in cardValue[id].definitions"
-                class="bg-warning rounded-full px-5 mx-1 my-1 flex text-white"
+                class="bg-warning rounded-full px-5 mx-1 mb-2 flex text-white md:mb-4"
                 >{{ definitions }}</span
               >
             </div>
           </div>
         </div>
-        
-        <div class="mt-2">
+
+        <hr class="pb-2" />
+
+        <div class="mt-2 flex items-center gap-2">
           <buttonNuxt @onClick="purchase()">
-          <Icon name="👜" class="mb-1 mr-2" /> Comprar Viagem
-        </buttonNuxt>
+            <Icon name="👜" class="mb-1 mr-2" /> Comprar Viagem
+          </buttonNuxt>
+
+          <nuxt-link to="/">
+            <Icon name="⬅️ " class="mb-1" /> Voltar
+          </nuxt-link>
         </div>
       </div>
     </div>

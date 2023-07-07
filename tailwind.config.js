@@ -11,8 +11,8 @@ module.exports = {
   theme: {
     extend: {},
     screens: {
-      sm: "650px",
-      md: "960px",
+      sm: "450px",
+      md: "760px",
       lg: "1280px",
       xl: "1440px",
     },
@@ -24,7 +24,7 @@ module.exports = {
       '3xl': '2rem',
     },
     colors: {
-      base: "#E5E5E5",
+      "gray-base": "#E5E5E5",
       primary: "#00DEA3",
       secondary: "#121626",
       warning: "#FF9500",
