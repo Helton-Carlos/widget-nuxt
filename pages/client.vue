@@ -1,20 +1,61 @@
-<script setup>
+<script setup  lang="ts">
+import { ref } from "vue";
 
 // definePageMeta({
-//   middleware: () => {
-//     return true
-//   }
+//   middleware: 'redirect'
 // })
+
 definePageMeta({
-  middleware: 'redirect'
-})
+  middleware: () => {
+    return true;
+  },
+});
+
+const email = ref<string>("");
+const password = ref<string>("");
+
+function getSingIn() {
+  email.value && password.value ? alert("Enviado!") : alert("Preencha os campos!");
+}
 </script>
+
 
 <template>
   <div>
-    <mainText>
-      Client
-    </mainText>
+    <mainText> Client </mainText>
+
+    <h3 class="text-xl underline">Log In</h3>
+
+    <div class="card-down text-center">
+      <form
+        class="flex flex-col mx-auto gap-2"
+        v-on:submit="getSingIn"
+      >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          v-model="email"
+          placeholder="nuxtvue@gmail.com"
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          v-model="password"
+          placeholder="********"
+        />
+
+        <buttonNuxt>
+          <Icon name="✅" class="mb-1 mr-1" /> LogIn
+        </buttonNuxt>
+
+        <nuxt-link to="/" class="hover:underline hover:transition">
+          <Icon name="😢" class="mb-1 mr-1" /> Não sou cadastrado
+        </nuxt-link>
+          
+      </form>
+    </div>
   </div>
 </template>
 

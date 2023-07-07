@@ -43,7 +43,7 @@ li {
 }
 
 .card-down {
-  @apply bg-white block items-center gap-4 p-4 my-4 shadow-lg md:flex md:justify-between;
+  @apply bg-white block items-center gap-4 p-4 my-4 shadow-lg;
 }
 
 .routes-path {
@@ -84,5 +84,6 @@ li {
 }
 
 input {
-  @apply w-full my-8 block pl-5 py-2 text-sm text-gray-dark border border-gray-light rounded-lg bg-gray-light focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40;
+  @apply w-full bg-gray-light my-2 pl-5 py-2 text-sm text-gray-dark border border-gray-light rounded-lg  
+    focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40;
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 definePageMeta({
   middleware: () => {
@@ -11,7 +11,7 @@ const email = ref<string>("");
 const text = ref<string>("");
 
 function newsLetter() {
-  email.value && text.value? alert("Enviado!"): alert("Preencha os campos!")
+  email.value && text.value ? alert("Enviado!") : alert("Preencha os campos!");
 }
 </script>
 
@@ -27,9 +27,24 @@ function newsLetter() {
     </p>
 
     <div class="card-down">
-      <form class="flex mx-auto justify-between items-center gap-4" v-on:submit="newsLetter">
-        <input type="email" name="email" id="email" v-model="email" placeholder="tecnologia@gmail.com" />
-        <input type="text" name="text" id="text" v-model="text" placeholder="Joe Smith" />
+      <form
+        class="flex mx-auto justify-between gap-8 items-center"
+        v-on:submit="newsLetter"
+      >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          v-model="email"
+          placeholder="nuxtvue@gmail.com"
+        />
+        <input
+          type="text"
+          name="text"
+          id="text"
+          v-model="text"
+          placeholder="Joe Smith"
+        />
 
         <buttonNuxt>
           <Icon name="💌" class="mb-1 mr-1" /> Quero novidades

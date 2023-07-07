@@ -32,7 +32,7 @@ function purchase() {
     </div>
 
     <div
-      class="card-down"
+      class="card-down md:flex md:justify-between"
     >
       <img
         :src="cardValue[id].imageMain"
