@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import SideBar from './layout/sidebar.vue';
+import headerNuxt from './layout/headerNuxt.vue';
 </script>
 
 <template>
-  <div class="flex">
-    <SideBar />
-    <div class="mt-4">
+  <div>
+    <headerNuxt />
+    <div class="container">
       <NuxtPage></NuxtPage>
     </div>
   </div>

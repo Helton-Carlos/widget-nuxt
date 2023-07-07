@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import Card from "~/components/card.vue";
-import { cards } from "~/utils/utils-card.ts";
+import { cards } from "~/utils/utils-card";
 
 const cardValue = cards();
+
+const textMain = ref<string>("Pacotes em promoção");
 
 function selectCard(id: number) {
   navigateTo(`/posts/${id}`);
@@ -10,18 +12,24 @@ function selectCard(id: number) {
 
 definePageMeta({
   middleware: () => {
-    return true
-  }
-})
+    return true;
+  },
+});
 </script>
 
 <template>
   <div>
-    <mainText>
-      Nuxt-3
-    </mainText>
-    
-    <div class="flex flex-wrap gap-4">
+    <main>
+      <img
+        class="w-full"
+        src="../assets/n3/main-image.png"
+        alt="main-image"
+      />
+    </main>
+
+    <mainText> {{ textMain }} </mainText>
+
+    <div class="flex justify-between flex-wrap gap-4">
       <Card
         v-for="card in cardValue"
         :key="card.id"
@@ -30,6 +38,7 @@ definePageMeta({
         :imageMain="card.imageMain"
         :persona="card.persona"
         :imagePersona="card.imagePersona"
+        :money="card.money"
         @selectCard="selectCard(card.id)"
       />
     </div>

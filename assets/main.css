@@ -18,29 +18,33 @@ span {
 }
 
 h1 {
-  @apply my-4 text-3xl font-bold text-primary bg-secondary py-2
+  @apply text-xl font-bold text-primary bg-secondary py-2 px-2;
+}
+
+header {
+  @apply bg-white h-[110px];
 }
 
 ul {
-  @apply my-4
+  @apply my-4;
 }
 
 li {
-  @apply py-2
+  @apply py-2;
+}
+
+.container {
+  @apply w-5/6 mx-auto py-2;
 }
 
 .card {
-  @apply bg-white rounded-lg shadow-lg cursor-pointer sm:w-[270px] 
+  @apply bg-white rounded-lg shadow-lg cursor-pointer sm:w-[300px] 
     hover:scale-105 hover:opacity-75;
 }
 
-.sidebar {
-  @apply bg-white min-w-[300px] h-screen pt-8 mr-4 text-center;
-}
-
 .routes-path {
-  @apply flex items-center justify-center text-base capitalize text-gray-dark font-medium w-2/4 mx-auto gap-1 py-1
-    hover:text-gray hover:underline hover:rounded-lg hover:px-2;
+  @apply text-base capitalize text-gray-dark font-medium gap-5 py-1 px-2 mt-2 mr-4
+    hover:text-gray hover:underline hover:rounded-lg;
 }
 
 .positive {
@@ -70,3 +74,7 @@ li {
   @apply text-blue;
 }
 
+.btn {
+  @apply bg-primary  py-1 px-5 rounded-3xl uppercase font-semibold hover:bg-success-ground shadow-xl 
+    hover:text-white;
+}
