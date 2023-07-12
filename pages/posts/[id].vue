@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import { cards } from "~/utils/utils-card";
+import { userLogin } from "~/store/user.pinia";
 import buttonNuxt from "~/components/buttonNuxt.vue";
 
 const cardValue = cards();
+const store = userLogin();
 
 const { id }: any = useRoute().params;
 
 function purchase() {
-  alert("hey");
+  if(store.login) {
+    alert("pode comprar")
+  } else {
+    alert("Faça seu login")
+  }
 }
 </script>
 
@@ -17,6 +23,7 @@ function purchase() {
       <mainText>
         {{ cardValue[id].title }}
       </mainText>
+      <p>        {{ store.login }}--{{ store.user }}    </p>
 
       <div class="flex items-center gap-2">
         <img

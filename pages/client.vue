@@ -1,9 +1,10 @@
-<script setup  lang="ts">
+<script setup lang="ts">
 import { ref } from "vue";
-
+import { userLogin } from "~/store/user.pinia";
 // definePageMeta({
 //   middleware: 'redirect'
 // })
+const store = userLogin();
 
 definePageMeta({
   middleware: () => {
@@ -15,22 +16,22 @@ const email = ref<string>("");
 const password = ref<string>("");
 
 function getSingIn() {
-  email.value && password.value ? alert("Enviado!") : alert("Preencha os campos!");
+  if (email.value && password.value) {
+    store.logar(email.value, password.value)
+  } else {
+    alert("Preencha os campos!");
+  }
 }
 </script>
-
 
 <template>
   <div>
     <mainText> Client </mainText>
-
+ 
     <h3 class="text-xl underline">Log In</h3>
 
     <div class="card-down text-center">
-      <form
-        class="flex flex-col mx-auto gap-2"
-        v-on:submit="getSingIn"
-      >
+      <form class="flex flex-col mx-auto gap-2" v-on:submit.prevent="getSingIn">
         <input
           type="email"
           name="email"
@@ -46,16 +47,12 @@ function getSingIn() {
           placeholder="********"
         />
 
-        <buttonNuxt>
-          <Icon name="✅" class="mb-1 mr-1" /> LogIn
-        </buttonNuxt>
+        <buttonNuxt> <Icon name="✅" class="mb-1 mr-1" /> LogIn </buttonNuxt>
 
         <nuxt-link to="/" class="hover:underline hover:transition">
           <Icon name="😢" class="mb-1 mr-1" /> Não sou cadastrado
         </nuxt-link>
-          
       </form>
     </div>
   </div>
 </template>
-

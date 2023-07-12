@@ -22,8 +22,10 @@
     "typescript": "latest"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
-    "eslint": "^8.43.0"
+    "eslint": "^8.43.0",
+    "pinia": "^2.1.4"
   }
 }
