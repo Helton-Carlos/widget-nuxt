@@ -17,7 +17,8 @@ const password = ref<string>("");
 
 function getSingIn() {
   if (email.value && password.value) {
-    store.logar(email.value, password.value)
+    store.logar(email.value, password.value);
+    navigateTo('/');
   } else {
     alert("Preencha os campos!");
   }
@@ -47,7 +48,9 @@ function getSingIn() {
           placeholder="********"
         />
 
-        <buttonNuxt> <Icon name="✅" class="mb-1 mr-1" /> LogIn </buttonNuxt>
+        <buttonNuxt> 
+          <Icon name="✅" class="mb-1 mr-1" /> LogIn 
+        </buttonNuxt>
 
         <nuxt-link to="/" class="hover:underline hover:transition">
           <Icon name="😢" class="mb-1 mr-1" /> Não sou cadastrado

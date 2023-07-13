@@ -1,19 +1,29 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import { cards } from "~/utils/utils-card";
 import { userLogin } from "~/store/user.pinia";
 import buttonNuxt from "~/components/buttonNuxt.vue";
+import modal from "~/components/modal.vue";
 
 const cardValue = cards();
 const store = userLogin();
 
+const login = ref<boolean>(false);
+const buyTravel = ref<boolean>(false);
+
 const { id }: any = useRoute().params;
 
 function purchase() {
-  if(store.login) {
-    alert("pode comprar")
+  if (store.login) {
+    buyTravel.value = true;
   } else {
-    alert("Faça seu login")
+    login.value = true;
   }
+}
+
+function close() {
+  login.value = false;
+  buyTravel.value = false;
 }
 </script>
 
@@ -23,7 +33,6 @@ function purchase() {
       <mainText>
         {{ cardValue[id].title }}
       </mainText>
-      <p>        {{ store.login }}--{{ store.user }}    </p>
 
       <div class="flex items-center gap-2">
         <img
@@ -38,13 +47,11 @@ function purchase() {
       </div>
     </div>
 
-    <div
-      class="card-down md:flex md:justify-between"
-    >
+    <div class="card-down md:flex md:justify-between">
       <img
         :src="cardValue[id].imageMain"
         :alt="cardValue[id].title"
-        class="w-full h-[200px] md:w-[450px]"
+        class="w-full h-[200px] md:w-[415px]"
       />
 
       <div>
@@ -118,5 +125,51 @@ function purchase() {
         </div>
       </div>
     </div>
+
+    <modal v-if="login">
+      <template v-slot:header>
+        <div class="flex justify-end mb-4">
+          <Icon class="cursor-pointer" name="❌" @click="close" />
+        </div>
+      </template>
+
+      <template v-slot:body>
+        <div class="flex justify-center items-center mb-6">
+          <div class="flex gap-2 items-center">
+            <Icon name="⚠️" />
+            <p class="font-semibold">Faça seu login</p>
+          </div>
+        </div>
+      </template>
+
+      <template v-slot:footer>
+        <div class="flex justify-center items-center gap-4">
+          <nuxt-link to="/client">
+            <buttonNuxt> Fazer login </buttonNuxt>
+          </nuxt-link>
+
+          <nuxt-link class="uppercase hover:underline" to="/"
+            >Cancelar</nuxt-link
+          >
+        </div>
+      </template>
+    </modal>
+
+    <modal v-if="buyTravel">
+      <template v-slot:header>
+        <div class="flex justify-end mb-4">
+          <Icon class="cursor-pointer" name="❌" @click="close" />
+        </div>
+      </template>
+
+      <template v-slot:body>
+        <div class="flex justify-center items-center mb-6">
+          <div class="flex gap-2 items-center">
+            <p class="font-semibold">Logado</p>
+          </div>
+        </div>
+      </template>
+    </modal>
+    
   </div>
 </template>
