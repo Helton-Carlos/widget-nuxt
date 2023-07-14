@@ -155,20 +155,6 @@ function close() {
       </template>
     </modal>
 
-    <modal v-if="buyTravel">
-      <template v-slot:header>
-        <div class="flex justify-end mb-4">
-          <Icon class="cursor-pointer" name="❌" @click="close" />
-        </div>
-      </template>
-
-      <template v-slot:body>
-        <div class="flex justify-center items-center mb-6">
-          <div class="flex gap-2 items-center">
-            <p class="font-semibold">Logado</p>
-          </div>
-        </div>
-      </template>
-    </modal>
+    <cardCredit v-if="buyTravel" />
   </div>
 </template>

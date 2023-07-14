@@ -32,7 +32,7 @@ function newsLetter() {
         v-on:submit="newsLetter"
       >
         <input
-          class="my-2"
+          class="mb-4 md:my-1"
           type="email"
           name="email"
           id="email"
@@ -40,7 +40,7 @@ function newsLetter() {
           placeholder="nuxtvue@gmail.com"
         />
         <input
-          class="my-2"
+          class="mb-4 md:my-1"
           type="text"
           name="text"
           id="text"
