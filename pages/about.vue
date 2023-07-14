@@ -28,10 +28,11 @@ function newsLetter() {
 
     <div class="card-down">
       <form
-        class="flex mx-auto justify-between gap-8 items-center"
+        class="mx-auto gap-8 items-center md:flex md:justify-between"
         v-on:submit="newsLetter"
       >
         <input
+          class="my-2"
           type="email"
           name="email"
           id="email"
@@ -39,6 +40,7 @@ function newsLetter() {
           placeholder="nuxtvue@gmail.com"
         />
         <input
+          class="my-2"
           type="text"
           name="text"
           id="text"
