@@ -120,7 +120,7 @@ function close() {
           </buttonNuxt>
 
           <nuxt-link to="/">
-            <Icon name="⬅️ " class="mb-1" /> Voltar
+            <Icon name="⬅️" class="mb-1 mr-1" /> Voltar
           </nuxt-link>
         </div>
       </div>
@@ -170,6 +170,5 @@ function close() {
         </div>
       </template>
     </modal>
-    
   </div>
 </template>

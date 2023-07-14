@@ -83,7 +83,11 @@ li {
     hover:text-white;
 }
 
+label {
+  @apply font-semibold;
+}
+
 input {
-  @apply w-full bg-gray-light my-2 pl-5 py-2 text-sm text-gray-dark border border-gray-light rounded-lg  
+  @apply w-full bg-gray-light pl-5 py-2 text-sm text-gray-dark border border-gray-light rounded-lg  
     focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40;
 }
