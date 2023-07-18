@@ -20,6 +20,10 @@ yarn dev
 or
 
 ```bash
+yarn  
+```
+
+```bash
 yarn dev -o
 ```
 
