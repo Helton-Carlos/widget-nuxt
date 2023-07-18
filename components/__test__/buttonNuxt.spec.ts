@@ -5,6 +5,7 @@ import buttonNuxt from '../buttonNuxt.vue';
 describe('buttonNuxt', () => {
   it('renders buttonNuxt component', () => {
     const wrapper = mount(buttonNuxt);
+    
     expect(wrapper).toBeTruthy();
   });
 

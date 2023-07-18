@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { shallowMount, exists } from "@vue/test-utils";
+import { shallowMount } from "@vue/test-utils";
 import card from "../card.vue";
 
 describe("card", () => {
