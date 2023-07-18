@@ -15,7 +15,12 @@ yarn
 ```
 
 ```bash
-yarn dev or yarn dev -o
+yarn dev
+```
+or
+
+```bash
+yarn dev -o
 ```
 
 **🧪 To view unit tests.** 
