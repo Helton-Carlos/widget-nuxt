@@ -16,7 +16,6 @@ function buyTrip() {
     modalBuyTrip.value = false;
   }
 }
-
 </script>
 
 <template>
@@ -26,7 +25,6 @@ function buyTrip() {
         class="flex h-full justify-center p-4 text-center items-center sm:p-0"
       >
         <div class="w-full card-down container" v-if="!modalBuyTrip">
-          {{ modalBuyTrip }}
           <div
             class="w-96 h-56 m-auto bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110"
           >
@@ -39,13 +37,18 @@ function buyTrip() {
               <div class="flex justify-between">
                 <div class="text-left">
                   <p class="font-light">Name</p>
-                  <p class="font-medium tracking-widest">{{ name }}</p>
+                  <p class="font-medium tracking-widest" data-test="name">
+                    {{ name }}
+                  </p>
                 </div>
                 <img class="w-14 h-14" src="https://i.imgur.com/bbPHJVe.png" />
               </div>
               <div class="pt-1">
                 <p class="font-light text-left">Card Number</p>
-                <p class="font-medium tracking-more-wider text-left">
+                <p
+                  class="font-medium tracking-more-wider text-left"
+                  data-test="number"
+                >
                   {{ number }}
                 </p>
               </div>
@@ -53,20 +56,29 @@ function buyTrip() {
                 <div class="flex justify-between">
                   <div class="">
                     <p class="font-light text-xs text-left">Valid</p>
-                    <p class="font-medium tracking-wider text-sm">
+                    <p
+                      class="font-medium tracking-wider text-sm"
+                      data-test="valid"
+                    >
                       {{ valid }}
                     </p>
                   </div>
                   <div class="">
                     <p class="font-light text-xs text-left">Expiry</p>
-                    <p class="font-medium tracking-wider text-sm">
+                    <p
+                      class="font-medium tracking-wider text-sm"
+                      data-test="expiry"
+                    >
                       {{ expiry }}
                     </p>
                   </div>
 
                   <div class="">
                     <p class="font-light text-xs text-left">CVV</p>
-                    <p class="font-bold tracking-more-wider text-sm">
+                    <p
+                      class="font-bold tracking-more-wider text-sm"
+                      data-test="cvv"
+                    >
                       {{ cvv }}
                     </p>
                   </div>
@@ -140,9 +152,9 @@ function buyTrip() {
 
         <modal v-if="modalBuyTrip">
           <template v-slot:header>
-            <div class="flex justify-end mb-4">
+            <nuxt-link to="/" class="flex justify-end mb-4">
               <Icon class="cursor-pointer" name="❌" />
-            </div>
+            </nuxt-link>
           </template>
 
           <template v-slot:body>
@@ -154,7 +166,9 @@ function buyTrip() {
                 </p>
               </div>
             </div>
-            <p class="font-thin mb-6">Você receberá a confirmação em seu e-mail.</p>
+            <p class="font-thin mb-6">
+              Você receberá a confirmação em seu e-mail.
+            </p>
           </template>
 
           <template v-slot:footer>

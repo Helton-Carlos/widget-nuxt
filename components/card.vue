@@ -16,7 +16,7 @@ defineEmits<{
 </script>
 
 <template>
-  <div class="w-full card" @click="$emit('selectCard')">
+  <div class="w-full card" @click="$emit('selectCard')" data-test="card">
     <div>
       <img :src="imageMain" :alt="title" class="w-full h-[140px]" />
     </div>
