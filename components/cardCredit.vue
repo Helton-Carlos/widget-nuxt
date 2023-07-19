@@ -24,7 +24,7 @@ function buyTrip() {
       <div
         class="flex h-full justify-center p-4 text-center items-center sm:p-0"
       >
-        <div class="w-full card-down container" v-if="!modalBuyTrip">
+        <div class="w-full card-down container" v-if="!modalBuyTrip" data-test="card-credit">
           <div
             class="w-96 h-56 m-auto bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110"
           >
@@ -87,7 +87,11 @@ function buyTrip() {
             </div>
           </div>
 
-          <form class="container text-left" @submit.prevent="buyTrip">
+          <form
+            class="container text-left"
+            @submit.prevent="buyTrip"
+            data-test="form"
+          >
             <h2 class="font-bold underline pb-1">Edite seu cartão:</h2>
 
             <label for="name">Nome</label>
@@ -97,6 +101,7 @@ function buyTrip() {
               id="name"
               v-model="name"
               placeholder="JOHN SMITH"
+              data-test="input-name"
             />
 
             <div class="flex gap-2">
@@ -108,6 +113,7 @@ function buyTrip() {
                   id="number"
                   v-model="number"
                   placeholder="4642 3489 9867 7632"
+                  data-test="input-number"
                 />
               </div>
 
@@ -119,6 +125,7 @@ function buyTrip() {
                   id="validade"
                   v-model="valid"
                   placeholder="03/21"
+                  data-test="input-valid"
                 />
               </div>
             </div>
@@ -132,6 +139,7 @@ function buyTrip() {
                   id="expira"
                   v-model="expiry"
                   placeholder="03/25"
+                  data-test="input-expiry"
                 />
               </div>
               <div>
@@ -142,6 +150,7 @@ function buyTrip() {
                   id="cvv"
                   v-model="cvv"
                   placeholder="035"
+                  data-test="input-cvv"
                 />
               </div>
             </div>
@@ -150,7 +159,7 @@ function buyTrip() {
           </form>
         </div>
 
-        <modal v-if="modalBuyTrip">
+        <modal v-if="modalBuyTrip" data-test="modal-buy">
           <template v-slot:header>
             <nuxt-link to="/" class="flex justify-end mb-4">
               <Icon class="cursor-pointer" name="❌" />
