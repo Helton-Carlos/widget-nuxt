@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Card from "~/components/card.vue";
-import { cards } from "~/utils/utils-card";
+import { cards } from "~/utils/utilsCard";
 
 const cardValue = cards();
 
@@ -44,3 +44,4 @@ definePageMeta({
     </div>
   </div>
 </template>
+utils/utilsCard

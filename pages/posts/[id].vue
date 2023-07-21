@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { cards } from "~/utils/utils-card";
+import { cards } from "~/utils/utilsCard";
 import { userLogin } from "~/store/user.pinia";
 import buttonNuxt from "~/components/buttonNuxt.vue";
 import modal from "~/components/modal.vue";
@@ -158,3 +158,4 @@ function close() {
     <cardCredit v-if="buyTravel" />
   </div>
 </template>
+utils/utilsCard
