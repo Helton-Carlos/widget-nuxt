@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { breakpoints } from "@/utils/useBreakpoints";
 
-const { lg } = breakpoints();
+const { xs } = breakpoints();
 
 const menu = ref<boolean>(false);
 
@@ -10,16 +10,21 @@ const router = [
   { name: "about", path: "/about", icon: "uil:building" },
   { name: "client", path: "/client", icon: "uil:user-circle" },
 ];
+
+
+function openMenu() {
+  menu.value = !menu.value
+}
 </script>
 
 <template>
-  <header :class="menu ? 'header-desktop' : 'header-mobile'">
+  <header :class="!menu ? 'header-desktop' : 'header-mobile'">
     <div class="container flex justify-between items-center ">
       <nuxt-link to="/">
         <h1><img src="../assets/n3/n3-logo.png" />Nuxt3</h1>
       </nuxt-link>
 
-      <ul class="flex" v-if="lg">
+      <ul class="flex" v-if="!xs">
         <li v-for="(routes, index) in router" :key="index">
           <nuxt-link :to="routes.path" class="routes-path">
             <Icon :name="routes.icon" />{{ routes.name }}</nuxt-link
@@ -27,10 +32,10 @@ const router = [
         </li>
       </ul>
 
-      <img v-else src="../assets/n3/menu.png" alt="menu" @click="menu = !menu" />
+      <img v-else src="../assets/n3/menu.png" alt="menu" @click="openMenu" />
     </div>
 
-    <ul class="mt-8 text-center z-50" v-if="!lg && !menu">
+    <ul class="mt-8 text-center z-50" v-if="menu">
       <li v-for="(routes, index) in router" :key="index" class="my-4">
         <nuxt-link :to="routes.path" class="routes-path px-4" @click="menu = !menu" >
           <Icon :name="routes.icon" />{{ routes.name }}</nuxt-link
