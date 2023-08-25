@@ -18,7 +18,7 @@ const password = ref<string>("");
 function getSingIn() {
   if (email.value && password.value) {
     store.logar(email.value, password.value);
-    navigateTo('/');
+    navigateTo('/user');
   } else {
     alert("Preencha os campos!");
   }

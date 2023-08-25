@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { userLogin } from "~/store/user.pinia";
-// definePageMeta({
-//   middleware: 'redirect'
-// })
+
 const store = userLogin();
 
 definePageMeta({
@@ -20,7 +18,7 @@ const confirmPassword = ref<string>("");
 function getSingIn() {
   if (name.value && email.value && password.value && confirmPassword.value) {
     if (password.value === confirmPassword.value) {
-      store.logar(email.value, password.value);
+      store.logar(name.value, email.value, password.value);
       navigateTo("/client");
     } else {
       alert("Senha e confirmação não são iguais.");

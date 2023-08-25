@@ -5,15 +5,17 @@ export const userLogin = defineStore('userLogin', {
     login: false,
     user: {
       email: "",
-      password: ""
+      password: "",
+      name: "usuario 1",
     }
   }),
   actions: {
-    logar(email: string, password: string): void {
+    logar(email: string, password: string, name: string): void {
       this.login = true;
       this.user = {
         email,
-        password
+        password,
+        name
       }
     },
   },

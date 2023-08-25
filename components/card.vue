@@ -31,7 +31,7 @@ defineEmits<{
         <div class="text-left pl-2">
           <div class="flex gap-1">
             <Icon name="🛫" />
-            <p class="text-gray-dark font-extrabold text-md">
+            <p class="text-gray-dark font-medium text-md">
               {{ title }}
             </p>
           </div>
