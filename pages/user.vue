@@ -2,13 +2,19 @@
 import { ref } from "vue";
 import { userLogin } from "~/store/user.pinia";
 
-const store = userLogin();
+definePageMeta({
+  middleware: 'redirect'
+})
+
+
 
 definePageMeta({
   middleware: () => {
     return true;
   },
 });
+
+const store = userLogin();
 
 const { email, name }  = store.user
 </script>

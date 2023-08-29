@@ -1,23 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { userLogin } from "~/store/user.pinia";
-// definePageMeta({
-//   middleware: 'redirect'
-// })
-const store = userLogin();
+import { user } from "~/mock/user";
 
-definePageMeta({
-  middleware: () => {
-    return true;
-  },
-});
+const [ users ] = user()
 
 const email = ref<string>("");
 const password = ref<string>("");
 
 function getSingIn() {
-  if (email.value && password.value) {
-    store.logar(email.value, password.value);
+  if ((users.email === email.value) && (users.password === password.value)) {
     navigateTo('/user');
   } else {
     alert("Preencha os campos!");
@@ -42,6 +33,7 @@ function getSingIn() {
           v-model="email"
           placeholder="nuxtvue@gmail.com"
         />
+        <p class="text-sm">copiar: {{ users.email }}</p>
 
         <label for="password">Senha</label>
         <input
@@ -51,6 +43,7 @@ function getSingIn() {
           v-model="password"
           placeholder="********"
         />
+        <p class="text-sm">copiar: {{ users.password }}</p>
 
         <buttonNuxt class="my-2"> 
           <Icon name="✅" class="mb-1 mr-1" /> LogIn 
