@@ -27,7 +27,7 @@ const { email, name }  = store.user
         <p>{{ email }}</p>
 
         <nuxt-link to="/" class="btn my-4 flex text-center justify-center items-center ">
-          <Icon name="✅" class="mb-1 mr-1" />Buy
+          <Icon name="✅" class="mb-1 mr-1" /> Buy
         </nuxt-link>
     </div>
   </div>

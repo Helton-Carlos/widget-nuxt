@@ -145,6 +145,22 @@ export function cards() {
       describe:
         "A Noruega é um país escandinavo que abrange montanhas, geleiras e fiordes litorâneos profundos. Oslo, a capital, é uma cidade cheia de áreas verdes e museus. Navios vikings preservados do século IX são exibidos no Museu do Navio Viking de Oslo. Bergen, com suas casas coloridas de madeira, é o ponto de partida de cruzeiros rumo ao deslumbrante Fiorde de Sogn.",
     },
+    {
+      id: 9,
+      title: "Gramado - RS",
+      persona: "Ana Flora",
+      city: "Gramado",
+      state: "Alagoas",
+      country: "Brasil",
+      imageMain:
+        "https://i.pinimg.com/originals/2a/7d/da/2a7dda68585846432f8f1e7e47d307d4.jpg",
+      imagePersona:
+        "https://static.vecteezy.com/ti/fotos-gratis/t2/3491890-rosto-close-up-retrato-de-menina-bonita-loira-com-pele-fresca-imagem-horizontal-gratis-foto.jpg",
+      definitions: ["Hotel", "Passeios"],
+      money: 2.705,
+      describe:
+        "Gramado é uma cidade com uma estância de montanha situada no estado mais a sul do Brasil, Rio Grande do Sul. Influenciada pelos colonos alemães do século XIX, a cidade possui um toque bávaro com chalés alpinos, chocolateiros e lojas de artesanato. Gramado é também conhecida pelas suas exibições de luzes de Natal e pelas hortênsias em flor na primavera.",
+    },
   ];
 
   return cards;
