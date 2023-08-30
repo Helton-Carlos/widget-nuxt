@@ -1,22 +1,12 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { userLogin } from "~/store/user.pinia";
+
+const store = userLogin();
+const { email, name }  = store.user
 
 definePageMeta({
   middleware: 'redirect'
-})
-
-
-
-definePageMeta({
-  middleware: () => {
-    return true;
-  },
-});
-
-const store = userLogin();
-
-const { email, name }  = store.user
+}) 
 </script>
 
 <template>

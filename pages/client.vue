@@ -1,17 +1,24 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { user } from "~/mock/user";
+import { usersMock } from "~/mock/user";
+import { userLogin } from "~/store/user.pinia";
 
-const [ users ] = user()
+const [ users ] = usersMock()
+const { user }= userLogin().$state
 
 const email = ref<string>("");
 const password = ref<string>("");
 
 function getSingIn() {
   if ((users.email === email.value) && (users.password === password.value)) {
+    
+    user.email = users.email ,
+    user.password = users.password,
+    user.name =  users.name,
+
     navigateTo('/user');
   } else {
-    alert("Preencha os campos!");
+    alert("* Preencha os campos corretamente.");
   }
 }
 </script>

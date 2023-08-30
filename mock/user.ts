@@ -1,4 +1,4 @@
-export function user() {
+export function usersMock() {
   const users = [
     {
       email: "adm@gmail.com",
