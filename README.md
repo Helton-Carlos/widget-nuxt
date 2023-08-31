@@ -1,4 +1,4 @@
-# Nuxt 3 + TypeScript + Vitest + Tailwind
+# Nuxt 3 + PWA + TypeScript + Vitest + Tailwind
 
 **💬 About.** 
 
