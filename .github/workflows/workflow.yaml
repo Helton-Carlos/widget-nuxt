@@ -8,12 +8,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Using Node.js
-        uses: actions/setup-node@v2
+
+      - name: Set Node.js 18.x
+        uses: actions/setup-node@v3.8.1
         with:
-          node-version: 16.
-      - name: run install, build and test
+          node-version: 18.x
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Rebuild the dist/ directory
         run: |
-          npm install
-          npm run build 
-          npm run test
+          yarn test
+          yarn coverage
+          yarn build
