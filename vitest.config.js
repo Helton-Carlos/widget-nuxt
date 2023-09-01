@@ -11,13 +11,16 @@ export default defineConfig({
           '**/*.{js,css,html,png,svg,mp3}',
         ],
       },
-      manifest: {
-        name: 'Widget Nuxt',
-        short_name: 'WidgetNuxt',
-        description: 'Widget Nuxt projeto de estudo com nuxt3. Vue3, Nuxt3, Typescript, Tailwind e bibliotecas adicionais.',
-        theme_color: '#ffffff',
-        lang: 'pt-BR',
+      manifest: { 
+        theme_color: '#E5E5E5',
+        background_color: '#ffffff',
+        display: 'standalone',
+        scope: '/',
         start_url: '/',
+        name: 'Widget Nuxt',
+        short_name: 'Widget Nuxt',
+        description: 'Widget Nuxt projeto de estudo com nuxt3. Vue3, Nuxt3, Typescript, Tailwind e bibliotecas adicionais.',
+        lang: 'pt-BR',
         icons: [
           {
             src: '/favicon-16x16.png',
