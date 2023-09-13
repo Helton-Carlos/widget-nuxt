@@ -9,7 +9,7 @@
     "lint": "eslint --ext .vue --ext .ts",
     "postinstall": "nuxt prepare",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
