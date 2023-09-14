@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Widget Nuxt",
+    "short_name": "Widget Nuxt",
     "icons": [
         {
             "src": "/android-chrome-48x48.png",
@@ -10,5 +10,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "/"
 }
